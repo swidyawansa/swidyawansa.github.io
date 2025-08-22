@@ -1,210 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV — Your Name</title>
-  <meta name="description" content="Curriculum Vitae of Your Name." />
-  <link rel="icon" href="data:,">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Vitae — SATHIRA PROMODYA WIDYAWANSA</title>
+  <meta name="description" content="CV of Sathira Promodya Widyawansa">
   <style>
-    :root {
-      --bg: #ffffff; --fg: #0f172a; --muted:#475569; --chip:#e2e8f0; --link:#2563eb; --accent:#0ea5e9;
+    :root{
+      --fg:#111827; --muted:#374151; --line:#e5e7eb; --accent:#0f766e; --link:#2563eb; --bg:#ffffff;
     }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --chip:#1f2937; --link:#60a5fa; }
+    @media (prefers-color-scheme: dark){
+      :root{ --fg:#e5e7eb; --muted:#9ca3af; --line:#1f2937; --accent:#2dd4bf; --link:#93c5fd; --bg:#0b1220; }
     }
-    html, body { 
-      margin:0; 
-      background:var(--bg); 
-      color:var(--fg); 
-      font:16px/1.6 "Times New Roman", Times, serif; 
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 Calibri, "Segoe UI", Roboto, Arial, sans-serif;}
+    .container{max-width:900px;margin:0 auto;padding:24px 20px;}
+    header{border-bottom:2px solid var(--line);padding-bottom:10px;margin-bottom:18px;}
+    .name{font-size:28px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;}
+    .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px;color:var(--muted);}
+    .contact a{color:var(--link);text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    .addr{margin-top:4px}
+    h2{margin:16px 0 8px;font-size:16px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:4px}
+    .section{margin-top:14px}
+    .item{margin-bottom:10px}
+    .role{font-weight:700}
+    .when{color:var(--muted)}
+    ul{margin:6px 0 0 18px}
+    li{margin:4px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .small{font-size:13px;color:var(--muted)}
+    a{color:var(--link)}
+    .page{page-break-after:always;padding-bottom:20px}
+    .page:last-child{page-break-after:auto}
+    .page-head{display:flex;justify-content:flex-end;color:var(--muted);font-size:12px}
+    .sigline{margin:28px 0 8px}
+    .two-col{display:grid;grid-template-columns: 220px 1fr;gap:14px}
+    @media (max-width: 760px){
+      .two-col{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;}
     }
-    .wrap { max-width:1000px; margin:0 auto; padding:28px 18px 60px; }
-    header { display:grid; grid-template-columns: 1fr auto; gap:12px; align-items:center; }
-    .name { font-size:clamp(28px, 4.5vw, 40px); font-weight:800; letter-spacing:-0.02em; font-family:"Times New Roman", Times, serif; }
-    .subtitle { color:var(--muted); margin-top:6px; font-family:"Times New Roman", Times, serif; }
-    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:13px; font-family:"Times New Roman", Times, serif; }
-    a { color:var(--link); text-decoration:none; font-family:"Times New Roman", Times, serif; }
-    a:hover { text-decoration:underline; }
-    .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .btn { border:1px solid var(--link); color:var(--link); padding:8px 12px; border-radius:10px; font-weight:600; font-family:"Times New Roman", Times, serif; }
-    .btn.filled { background:var(--link); color:#fff; }
-    section { margin-top:28px; }
-    h2 { font-size:20px; margin:0 0 12px; border-bottom:1px solid var(--chip); padding-bottom:6px; font-family:"Times New Roman", Times, serif; }
-    .two-col { display:grid; grid-template-columns: 240px 1fr; gap:18px; }
-    .item { margin-bottom:12px; font-family:"Times New Roman", Times, serif; }
-    .when { color:var(--muted); font-size:14px; font-family:"Times New Roman", Times, serif; }
-    ul { margin:8px 0 0 18px; font-family:"Times New Roman", Times, serif; }
-    li { margin:4px 0; font-family:"Times New Roman", Times, serif; }
-    .contact a { margin-right:12px; }
-    footer { margin-top:36px; color:var(--muted); font-size:14px; font-family:"Times New Roman", Times, serif; }
-    .address { white-space: pre-line; }
-    .print-note { color:var(--muted); font-size:13px; font-family:"Times New Roman", Times, serif; }
-    @media (max-width: 720px) {
-      .two-col { grid-template-columns: 1fr; }
-      header { grid-template-columns: 1fr; }
-      .actions { justify-content:flex-start; }
-    }
-    /* Print styling */
-    @media print {
-      .actions, .print-note { display:none; }
-      a { color:inherit; text-decoration:none; }
-      body { font-size:12px; font-family:"Times New Roman", Times, serif; }
-      header, section { break-inside: avoid; }
-    }
+    .profile-pic{width:150px;height:150px;object-fit:cover;border-radius:8px;margin-left:20px;}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <div class="container page">
+    <div class="page-head">Page 1 of 3</div>
+    <header style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
       <div>
-        <div class="name">Your Name</div>
-        <div class="subtitle">BSc (Hons) Engineering Physics · MPhil (Flexible Electronics & Functional Materials)</div>
-        <div class="chips">
-          <span class="chip">Energy harvesting</span>
-          <span class="chip">Flexible electronics</span>
-          <span class="chip">Sensors & materials</span>
-        </div>
-        <div class="contact" style="margin-top:10px;">
-          <a href="mailto:your@email.com">your@email.com</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">ResearchGate</a>
-          <a href="#">Google Scholar</a>
+        <div class="name">SATHIRA PROMODYA WIDYAWANSA</div>
+        <div class="addr">Address: No 75/4, Ellawala Lane, Batugedara, Ratnapura, Sri Lanka 70000</div>
+        <div class="contact">
+          <span>Email: <a href="mailto:2sathira99@gmail.com">2sathira99@gmail.com</a></span>
+          <span>Academic Email: <a href="mailto:2020s18255@stu.cmb.ac.lk">2020s18255@stu.cmb.ac.lk</a></span>
+          <span>Tel: (+94) 71 6593416</span>
+          <span><a href="https://www.linkedin.com/in/sathira-widyawansa-629290194/">LinkedIn</a></span>
+          <span><a href="https://www.researchgate.net/profile/Sathira-Widyawansa">ResearchGate</a></span>
         </div>
       </div>
-      <div class="actions">
-        <a class="btn filled" href="./assets/CV.pdf" download>Download PDF</a>
-        <a class="btn" href="#" onclick="window.print();return false;">Print</a>
-      </div>
+      <!-- PHOTO GOES HERE -->
+      <img src="assets/swidyawansa_pic.jpg" alt="Sathira Promodya Widyawansa" class="profile-pic">
     </header>
 
-    <section class="two-col">
-      <div><h2>Personal Statement</h2></div>
-      <div>
-        <p>Write 3–4 concise sentences that summarize your goals, strengths, and interests. Keep it specific to engineering physics, flexible electronics, and materials.</p>
-      </div>
+    <!-- ===== Example sections (trimmed for brevity) ===== -->
+    <section class="section">
+      <h2>PERSONAL STATEMENT</h2>
+      <p>I'm a committed, self-motivated, knowledgeable, and innovative engineering physics undergraduate who wishes to contribute to the field of science for the betterment of humanity by applying the knowledge, expertise, and experience I gained during my studies.</p>
     </section>
 
-    <section class="two-col">
-      <div><h2>Education</h2></div>
-      <div>
-        <div class="item">
-          <b>Degree · University</b>
-          <div class="when">Years</div>
-          <div>Include GPA / Class and notable coursework if relevant.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Research Experience</h2></div>
-      <div>
-        <div class="item">
-          <b>Position — Lab / Department</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>One‑line description of the research areas and techniques.</li>
-            <li>Key outputs (posters, abstracts, datasets, tools) with links.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Work Experience</h2></div>
-      <div>
-        <div class="item">
-          <b>Role — Organization</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>Summarize your duties, achievements, and impact.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Research Interests</h2></div>
-      <div>
+    <section class="section">
+      <h2>EDUCATION</h2>
+      <div class="item">
+        <div class="role">BSc (Hons) in Engineering Physics <span class="when">2021 - 2025</span></div>
+        <div>Department of Physics, University of Colombo, Sri Lanka.</div>
         <ul>
-          <li>Example: Experimental/Applied Physics, Condensed Matter, Materials Physics</li>
-          <li>Flexible Electronics, Instrumentation, Sensor Development</li>
+          <li>Degree Class: Second Class (Lower Division)</li>
+          <li>GPA: 3.18 out of 4.00</li>
+          <li>Core Courses: Quantum Mechanics, Classical Mechanics, Electromagnetic Fields, Statistical Physics, Solid State Physics, Advanced Analogue and Digital Electronics, Embedded Systems Laboratory, Circuit Analysis and Simulation, Data Acquisition & Signal Processing, Design and Machining Laboratory.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="role">Secondary Education <span class="when">2006 - 2019</span></div>
+        <div>St. Aloysius’ College, Ratnapura, Sri Lanka.</div>
+        <ul>
+          <li>GCE Advanced Level (2019), Majored in Physical Sciences. (Physics: A, Chemistry: A, Combined Maths: B)</li>
         </ul>
       </div>
     </section>
-
-    <section class="two-col">
-      <div><h2>Skills & Techniques</h2></div>
-      <div>
-        <ul>
-          <li>Programming: Python, C/C++, MATLAB, Embedded</li>
-          <li>Software: LabVIEW, Origin, EAGLE, Multisim, OrCAD</li>
-          <li>Lab: DOE, data analysis, precision measurement, automation</li>
-          <li>Management: communication, planning, leadership</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Academic Projects</h2></div>
-      <div>
-        <div class="item">
-          <b>Project title — short description</b>
-          <div class="when">Year</div>
-          <ul>
-            <li>One sentence about what you built or discovered.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Leadership & Extracurricular</h2></div>
-      <div>
-        <div class="item">
-          <b>Role — Organization</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>Impact, scale, and outcomes.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Volunteering</h2></div>
-      <div>
-        <div class="item">
-          <b>Initiative — Organization</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>What you did, whom it helped, and your role.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Professional Memberships</h2></div>
-      <div>
-        <ul>
-          <li>Example: APS, SPIE, IEEE</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>References</h2></div>
-      <div>
-        <p>Available upon request. (Or list names, titles, and contacts if you prefer.)</p>
-      </div>
-    </section>
-
-    <footer>
-      <div>Last updated: <span id="d">2025-08-22</span></div>
-      <div class="print-note">Tip: use the “Download PDF” button above to share a static version.</div>
-    </footer>
+    <!-- Keep adding your other sections: Research Publication, Research Experience, Skills, Projects, Leadership, Volunteering, References, Declaration -->
   </div>
 </body>
 </html>
