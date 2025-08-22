@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Your Name</title>
+  <meta name="description" content="Curriculum Vitae of Your Name." />
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0f172a; --muted:#475569; --chip:#e2e8f0; --link:#2563eb; --accent:#0ea5e9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --chip:#1f2937; --link:#60a5fa; }
+    }
+    html, body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans"; }
+    .wrap { max-width:1000px; margin:0 auto; padding:28px 18px 60px; }
+    header { display:grid; grid-template-columns: 1fr auto; gap:12px; align-items:center; }
+    .name { font-size:clamp(28px, 4.5vw, 40px); font-weight:800; letter-spacing:-0.02em; }
+    .subtitle { color:var(--muted); margin-top:6px; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:13px; }
+    a { color:var(--link); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .btn { border:1px solid var(--link); color:var(--link); padding:8px 12px; border-radius:10px; font-weight:600; }
+    .btn.filled { background:var(--link); color:#fff; }
+    section { margin-top:28px; }
+    h2 { font-size:20px; margin:0 0 12px; border-bottom:1px solid var(--chip); padding-bottom:6px; }
+    .two-col { display:grid; grid-template-columns: 240px 1fr; gap:18px; }
+    .item { margin-bottom:12px; }
+    .when { color:var(--muted); font-size:14px; }
+    ul { margin:8px 0 0 18px; }
+    li { margin:4px 0; }
+    .contact a { margin-right:12px; }
+    footer { margin-top:36px; color:var(--muted); font-size:14px; }
+    .address { white-space: pre-line; }
+    .print-note { color:var(--muted); font-size:13px; }
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { grid-template-columns: 1fr; }
+      .actions { justify-content:flex-start; }
+    }
+    /* Print styling */
+    @media print {
+      .actions, .print-note { display:none; }
+      a { color:inherit; text-decoration:none; }
+      body { font-size:12px; }
+      header, section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="name">Your Name</div>
+        <div class="subtitle">BSc (Hons) Engineering Physics · MPhil (Flexible Electronics & Functional Materials)</div>
+        <div class="chips">
+          <span class="chip">Energy harvesting</span>
+          <span class="chip">Flexible electronics</span>
+          <span class="chip">Sensors & materials</span>
+        </div>
+        <div class="contact" style="margin-top:10px;">
+          <a href="mailto:your@email.com">your@email.com</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">ResearchGate</a>
+          <a href="#">Google Scholar</a>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn filled" href="./assets/CV.pdf" download>Download PDF</a>
+        <a class="btn" href="#" onclick="window.print();return false;">Print</a>
+      </div>
+    </header>
+
+    <section class="two-col">
+      <div><h2>Personal Statement</h2></div>
+      <div>
+        <p>Write 3–4 concise sentences that summarize your goals, strengths, and interests. Keep it specific to engineering physics, flexible electronics, and materials.</p>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Education</h2></div>
+      <div>
+        <div class="item">
+          <b>Degree · University</b>
+          <div class="when">Years</div>
+          <div>Include GPA / Class and notable coursework if relevant.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Research Experience</h2></div>
+      <div>
+        <div class="item">
+          <b>Position — Lab / Department</b>
+          <div class="when">Years</div>
+          <ul>
+            <li>One‑line description of the research areas and techniques.</li>
+            <li>Key outputs (posters, abstracts, datasets, tools) with links.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Work Experience</h2></div>
+      <div>
+        <div class="item">
+          <b>Role — Organization</b>
+          <div class="when">Years</div>
+          <ul>
+            <li>Summarize your duties, achievements, and impact.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Research Interests</h2></div>
+      <div>
+        <ul>
+          <li>Example: Experimental/Applied Physics, Condensed Matter, Materials Physics</li>
+          <li>Flexible Electronics, Instrumentation, Sensor Development</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Skills & Techniques</h2></div>
+      <div>
+        <ul>
+          <li>Programming: Python, C/C++, MATLAB, Embedded</li>
+          <li>Software: LabVIEW, Origin, EAGLE, Multisim, OrCAD</li>
+          <li>Lab: DOE, data analysis, precision measurement, automation</li>
+          <li>Management: communication, planning, leadership</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Academic Projects</h2></div>
+      <div>
+        <div class="item">
+          <b>Project title — short description</b>
+          <div class="when">Year</div>
+          <ul>
+            <li>One sentence about what you built or discovered.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Leadership & Extracurricular</h2></div>
+      <div>
+        <div class="item">
+          <b>Role — Organization</b>
+          <div class="when">Years</div>
+          <ul>
+            <li>Impact, scale, and outcomes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Volunteering</h2></div>
+      <div>
+        <div class="item">
+          <b>Initiative — Organization</b>
+          <div class="when">Years</div>
+          <ul>
+            <li>What you did, whom it helped, and your role.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>Professional Memberships</h2></div>
+      <div>
+        <ul>
+          <li>Example: APS, SPIE, IEEE</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <div><h2>References</h2></div>
+      <div>
+        <p>Available upon request. (Or list names, titles, and contacts if you prefer.)</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>Last updated: <span id="d">2025-08-22</span></div>
+      <div class="print-note">Tip: use the “Download PDF” button above to share a static version.</div>
+    </footer>
+  </div>
+</body>
+</html>
