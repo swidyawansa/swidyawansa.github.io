@@ -1,210 +1,336 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV — Your Name</title>
-  <meta name="description" content="Curriculum Vitae of Your Name." />
-  <link rel="icon" href="data:,">
-  <style>
-    :root {
-      --bg: #ffffff; --fg: #0f172a; --muted:#475569; --chip:#e2e8f0; --link:#2563eb; --accent:#0ea5e9;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --chip:#1f2937; --link:#60a5fa; }
-    }
-    html, body { 
-      margin:0; 
-      background:var(--bg); 
-      color:var(--fg); 
-      font:16px/1.6 "Times New Roman", Times, serif; 
-    }
-    .wrap { max-width:1000px; margin:0 auto; padding:28px 18px 60px; }
-    header { display:grid; grid-template-columns: 1fr auto; gap:12px; align-items:center; }
-    .name { font-size:clamp(28px, 4.5vw, 40px); font-weight:800; letter-spacing:-0.02em; font-family:"Times New Roman", Times, serif; }
-    .subtitle { color:var(--muted); margin-top:6px; font-family:"Times New Roman", Times, serif; }
-    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
-    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:13px; font-family:"Times New Roman", Times, serif; }
-    a { color:var(--link); text-decoration:none; font-family:"Times New Roman", Times, serif; }
-    a:hover { text-decoration:underline; }
-    .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .btn { border:1px solid var(--link); color:var(--link); padding:8px 12px; border-radius:10px; font-weight:600; font-family:"Times New Roman", Times, serif; }
-    .btn.filled { background:var(--link); color:#fff; }
-    section { margin-top:28px; }
-    h2 { font-size:20px; margin:0 0 12px; border-bottom:1px solid var(--chip); padding-bottom:6px; font-family:"Times New Roman", Times, serif; }
-    .two-col { display:grid; grid-template-columns: 240px 1fr; gap:18px; }
-    .item { margin-bottom:12px; font-family:"Times New Roman", Times, serif; }
-    .when { color:var(--muted); font-size:14px; font-family:"Times New Roman", Times, serif; }
-    ul { margin:8px 0 0 18px; font-family:"Times New Roman", Times, serif; }
-    li { margin:4px 0; font-family:"Times New Roman", Times, serif; }
-    .contact a { margin-right:12px; }
-    footer { margin-top:36px; color:var(--muted); font-size:14px; font-family:"Times New Roman", Times, serif; }
-    .address { white-space: pre-line; }
-    .print-note { color:var(--muted); font-size:13px; font-family:"Times New Roman", Times, serif; }
-    @media (max-width: 720px) {
-      .two-col { grid-template-columns: 1fr; }
-      header { grid-template-columns: 1fr; }
-      .actions { justify-content:flex-start; }
-    }
-    /* Print styling */
-    @media print {
-      .actions, .print-note { display:none; }
-      a { color:inherit; text-decoration:none; }
-      body { font-size:12px; font-family:"Times New Roman", Times, serif; }
-      header, section { break-inside: avoid; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Vitae — SATHIRA PROMODYA WIDYAWANSA</title>
+<meta name="description" content="Academic CV of Sathira Promodya Widyawansa">
+<style>
+:root{
+/* Ensure header, address, contact info, and portrait use the same font as main paragraphs */
+.name, .subtitle, .addr, .contact, .contact div, .contact a, header, .mast, .avatar {
+  font-family: "Georgia", "Times New Roman", serif !important;
+}
+--bg: #ffffff;
+--fg: #111111;
+--muted: #444444;
+--line: #d0d0d0;
+--link: #0b57d0;
+--accent: #003366;
+
+
+--step--1: 0.9rem;
+--step-0: 1.125rem;
+--step-1: 1.25rem;
+--step-2: 1.5rem;
+--step-3: 1.75rem;
+}
+
+
+@media (prefers-color-scheme: dark){
+:root{ --bg:#0e0e0e; --fg:#efefef; --muted:#c7c7c7; --line:#333; --link:#7ab4ff; --accent:#cde5ff; }
+img{ filter: brightness(0.95) contrast(1.05); }
+}
+
+
+html, body{
+background: var(--bg);
+color: var(--fg);
+margin: 0;
+font: var(--step-0)/1.65 "Georgia", "Times New Roman", serif;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+}
+
+
+.container{ max-width: 900px; margin: 0 auto; padding: 36px 26px; }
+
+
+header{ border-bottom: 2px solid var(--line); padding-bottom: 14px; margin-bottom: 24px; }
+.mast{ display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+.name{ font-size: var(--step-3); font-weight: 800; letter-spacing: .02em; line-height: 1.2; color: var(--accent); }
+.subtitle{ margin-top: 4px; color: var(--muted); font-style: italic; }
+.addr{ margin-top: 6px; color: var(--muted); }
+.avatar{ height: 140px; width: 140px; border-radius: 10px; object-fit: cover; box-shadow: 0 1px 8px rgba(0,0,0,.1); }
+
+
+.contact{ display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 16px; color: var(--fg); font-size: var(--step--1); }
+.contact div{ flex: 1 1 auto; min-width: 240px; }
+.contact a{ color: var(--link); text-decoration: none; font-weight: 500; }
+.contact a:hover{ text-decoration: underline; }
+
+
+h2{ margin: 28px 0 14px; font-size: var(--step-2); letter-spacing: .05em; text-transform: uppercase; font-weight: 700; border-bottom: 2px solid var(--line); padding-bottom: 4px; color: var(--accent); }
+.section{ margin-top: 22px; }
+.item{ margin-bottom: 16px; }
+.role{ font-weight: 700; }
+.when{ color: var(--muted); font-variant-numeric: tabular-nums; }
+
+
+ul{ margin: 6px 0 0 20px; padding: 0; }
+ol{ margin: 6px 0 0 20px; padding: 0; }
+li{ margin: 6px 0; line-height: 1.5; }
+
+
+.grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.small{ font-size: var(--step--1); color: var(--muted); }
+a{ color: var(--link); }
+.two-col{ display: grid; grid-template-columns: 240px 1fr; gap: 16px; }
+
+
+.page{ page-break-after: always; padding-bottom: 28px; }
+.page:last-child{ page-break-after: auto; }
+
+
+@media (max-width: 760px){
+.mast{ grid-template-columns: 1fr; }
+.two-col{ grid-template-columns: 1fr; }
+.grid-2{ grid-template-columns: 1fr; }
+.avatar{ height: 120px; width: 120px; }
+}
+
+
+@page { size: A4; margin: 18mm 16mm; }
+@media print{
+:root{ --link: #000; }
+a{ color: #000; text-decoration: underline; }
+.container{ padding: 0; max-width: unset; }
+header{ border-bottom-color: #999; }
+h2{ background: #f5f5f5; color:#000; }
+}
+
+
+section p, section li{ max-width: 75ch; }
+</style>
 </head>
 <body>
-  <div class="wrap">
+<body>
+  <div class="container page">
     <header>
-      <div>
-        <div class="name">Your Name</div>
-        <div class="subtitle">BSc (Hons) Engineering Physics · MPhil (Flexible Electronics & Functional Materials)</div>
-        <div class="chips">
-          <span class="chip">Energy harvesting</span>
-          <span class="chip">Flexible electronics</span>
-          <span class="chip">Sensors & materials</span>
+      <div class="mast">
+        <div>
+          <div class="name">Sathira Promodya Widyawansa (Widyawansa S P)</div>
+          <div class="subtitle">Curriculum Vitae</div>
+          <div class="addr" style="color: #fff;">Work Address: Department of Physics, University of Colombo, Sri Lanka.</div>
+          <div class="addr" style="color: #fff;">Personal Address: No 75/4, Ellawala Lane, Batugedara, Ratnapura, Sri Lanka.</div>
         </div>
-        <div class="contact" style="margin-top:10px;">
-          <a href="mailto:your@email.com">your@email.com</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">ResearchGate</a>
-          <a href="#">Google Scholar</a>
-        </div>
+        <img class="avatar" src="assets/swidyawansa_pic.jpg" alt="Portrait of Sathira Promodya Widyawansa" />
       </div>
-      <div class="actions">
-        <a class="btn filled" href="./assets/CV.pdf" download>Download PDF</a>
-        <a class="btn" href="#" onclick="window.print();return false;">Print</a>
+      <div class="contact">
+        <div>Personal Email: <a href="mailto:swidyawansa@gmail.com">swidyawansa@gmail.com</a></div>
+        <div>Academic Email: <a href="mailto:2020s18255@stu.cmb.ac.lk">2020s18255@stu.cmb.ac.lk</a></div>
+        <div>Telephone: (+94) 71 6593416</div>
+        <div style="display: flex; gap: 100px; align-items: center;">
+          <a href="https://www.linkedin.com/in/sathira-widyawansa-629290194/">LinkedIn</a>
+          <a href="https://www.researchgate.net/profile/Sathira-Widyawansa">ResearchGate</a>
+          <a href="https://scholar.google.com/citations?user=Ujq-r3YAAAAJ&hl=en">Google Scholar</a>
+        </div>
       </div>
     </header>
 
-    <section class="two-col">
-      <div><h2>Personal Statement</h2></div>
-      <div>
-        <p>Write 3–4 concise sentences that summarize your goals, strengths, and interests. Keep it specific to engineering physics, flexible electronics, and materials.</p>
-      </div>
+    <section class="section">
+      <h2>Personal statement</h2>
+      <p>I'm a committed, self-motivated, knowledgeable, and innovative engineering physics undergraduate who wishes to contribute to the field of science for the betterment of humanity by applying the knowledge, expertise, and experience I gained during my studies.</p>
     </section>
 
-    <section class="two-col">
-      <div><h2>Education</h2></div>
-      <div>
-        <div class="item">
-          <b>Degree · University</b>
-          <div class="when">Years</div>
-          <div>Include GPA / Class and notable coursework if relevant.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Research Experience</h2></div>
-      <div>
-        <div class="item">
-          <b>Position — Lab / Department</b>
-          <div class="when">Years</div>
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <div class="role">Master of Philosophy in Flexible Electronics and Functional Materials: <span class="when">2025 – Present</span></div>
+          <div>Department of Physics, University of Colombo, Colombo 03, Sri Lanka.</div>
+        </li>
+        <li>
+          <div class="role">BSc (Hons) in Engineering Physics: <span class="when">2021 – 2025</span></div>
+          <div>Department of Physics, University of Colombo, Colombo 03, Sri Lanka.</div>
           <ul>
-            <li>One‑line description of the research areas and techniques.</li>
-            <li>Key outputs (posters, abstracts, datasets, tools) with links.</li>
+            <li>Degree Class: Second Class (Lower Division)</li>
+            <li>GPA: 3.18 out of 4.00</li>
+            <li>Core Courses: Quantum Mechanics, Classical Mechanics, Electromagnetic Fields, Statistical Physics, Solid State Physics, Advanced Analogue and Digital Electronics, Embedded Systems Laboratory, Circuit Analysis and Simulation, Data Acquisition &amp; Signal Processing, Design and Machining Laboratory.</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Work Experience</h2></div>
-      <div>
-        <div class="item">
-          <b>Role — Organization</b>
-          <div class="when">Years</div>
+        </li>
+        <li>
+          <div class="role">Secondary Education: <span class="when">2006 – 2019</span></div>
+          <div>St. Aloysius’ College, Ratnapura, Sri Lanka.</div>
           <ul>
-            <li>Summarize your duties, achievements, and impact.</li>
+            <li>GCE Advanced Level (2019), Majored in Physical Sciences. (Physics: A, Chemistry: A, Combined Maths: B)</li>
           </ul>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
 
-    <section class="two-col">
-      <div><h2>Research Interests</h2></div>
-      <div>
+    <section class="section">
+      <h2>Research publications</h2>
+      <div class="item">
+        <div class="role">APS GPS 2025 March Meeting</div>
         <ul>
-          <li>Example: Experimental/Applied Physics, Condensed Matter, Materials Physics</li>
-          <li>Flexible Electronics, Instrumentation, Sensor Development</li>
+          <li><strong>Abstract Publication</strong>: IoT-Enabled Printed LP Gas Sensor using Reduced Graphene Oxide / Tin(IV) Oxide Nanocomposite on Flexible Substrate.</li>
+        </ul>
+        <p>The Undergraduate Research Project was completed and extended to publish an abstract to the American Physical Society, General Physics Summit 2025, March Meeting. Abstract available at: <a href="https://summit.aps.org/events/VIR-C07/3">https://summit.aps.org/events/VIR-C07/3</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Undergraduate research project</h2>
+      <div class="item">
+        <div class="role">Grade A+ <span class="when">2024 – 2025</span></div>
+        <ul>
+          <li><strong>Dissertation Title</strong> – Graphene-Based Flexible LP Gas Sensor.</li>
+        </ul>
+        <p>The research involved developing a chemiresistive nanomaterial which is sensitive to LPG and printing it on a flexible substrate with a circuit. This included the nanomaterial’s synthesis, characterization, optimization, and application, providing hands-on experience in its fabrication and analysis along with the full sensor fabrication.</p>
+        <ul>
+          <li>Supervisor: Prof. Dilushan R. Jayasundara</li>
+          <li>Co-supervisor: Prof. Darshana Lakmal Weerawarne</li>
         </ul>
       </div>
     </section>
 
-    <section class="two-col">
-      <div><h2>Skills & Techniques</h2></div>
-      <div>
+    <section class="section">
+      <h2>Research interests</h2>
+      <p>Experimental/Applied Physics research within the realms of Condensed Matter Physics, Materials Physics, Flexible Electronics, Instrumentation, and Sensor Development.</p>
+    </section>
+
+    <section class="section">
+      <h2>Work experience</h2>
+      <div class="item">
+        <div class="role">Graduate Research Assistant <span class="when">2025 – Present</span></div>
+        <div>Department of Physics, University of Colombo, Sri Lanka.</div>
         <ul>
-          <li>Programming: Python, C/C++, MATLAB, Embedded</li>
-          <li>Software: LabVIEW, Origin, EAGLE, Multisim, OrCAD</li>
-          <li>Lab: DOE, data analysis, precision measurement, automation</li>
-          <li>Management: communication, planning, leadership</li>
+          <li>Conducting research in advanced materials and flexible electronics.</li>
+          <li>Assisting in experimental design, data analysis, and manuscript preparation.</li>
+          <li>Collaborating with faculty and graduate students on interdisciplinary projects.</li>
         </ul>
+
+  <div style="height:1.5em;"></div>
+
+        <div class="role">Temporary Demonstrator <span class="when">May 2025 – July 2025</span></div>
+        <div>Department of Physics, University of Colombo, Sri Lanka.</div>
+        <ol>
+          <li>PH 1052 Electronics for Medical Imaging by Dr. Luckshitha Suriyasena: Demonstrator In-Charge</li>
+          <li>PH 2006 Nanoscience and Nanotechnology by Prof. Dilushan Jayasundara: Demonstrator In-Charge</li>
+          <li>PH 4014 Introduction to Robotics by Dr. M. K. Jayananda: Demonstrator</li>
+          <li>PH 2022 Analog and Digital Electronic Principles Laboratory by Prof. H. E. Jayaweera &amp; Dr. Deshitha Wickrmarathna: Demonstrator</li>
+          <li>PH 1022 Physics Laboratory I by Prof. Mahesh Edirisinghe &amp; Dr. Thanuja Sooriyagoda</li>
+        </ol>
       </div>
     </section>
-
-    <section class="two-col">
-      <div><h2>Academic Projects</h2></div>
-      <div>
-        <div class="item">
-          <b>Project title — short description</b>
-          <div class="when">Year</div>
-          <ul>
-            <li>One sentence about what you built or discovered.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Leadership & Extracurricular</h2></div>
-      <div>
-        <div class="item">
-          <b>Role — Organization</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>Impact, scale, and outcomes.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Volunteering</h2></div>
-      <div>
-        <div class="item">
-          <b>Initiative — Organization</b>
-          <div class="when">Years</div>
-          <ul>
-            <li>What you did, whom it helped, and your role.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>Professional Memberships</h2></div>
-      <div>
-        <ul>
-          <li>Example: APS, SPIE, IEEE</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="two-col">
-      <div><h2>References</h2></div>
-      <div>
-        <p>Available upon request. (Or list names, titles, and contacts if you prefer.)</p>
-      </div>
-    </section>
-
-    <footer>
-      <div>Last updated: <span id="d">2025-08-22</span></div>
-      <div class="print-note">Tip: use the “Download PDF” button above to share a static version.</div>
-    </footer>
   </div>
+
+  <div class="container page">
+    <section class="section">
+      <h2>Research experience</h2>
+      <div class="item">
+        <div class="role">Research Student <span class="when">May 2024 – Present</span></div>
+        <div>Materials Research Laboratory, Department of Physics, University of Colombo, Sri Lanka.</div>
+        <div>Principal Investigator: Prof. Dilushan R Jayasundara (Senior Lecturer)</div>
+        <p>The MRL carries out research mainly in the areas of materials science and nanotechnology. These include graphene and graphene applications, understanding physics and chemistry at the interface, and industrial applications of nanotechnology.</p>
+      </div>
+      <div class="item">
+        <div class="role">Research Student <span class="when">May 2024 – Present</span></div>
+        <div>Center for Instrument Development, Department of Physics, University of Colombo, Sri Lanka.</div>
+        <div>Principal Investigator: Prof. Darshana L Weerawarne (Senior Lecturer)</div>
+        <p>The CID Research Laboratory specializes in advanced materials, electronics, and instrumentation, and data analytics, focusing on creating innovative bio/nanosensors, flexible electronics, and machine-learning applications to address real-world challenges.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills and techniques</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, Java, C, MATLAB, Embedded C.</li>
+        <li><strong>Software-based Skills:</strong> LabVIEW, Origin, EAGLE, Fusion 360, NI Multisim, OrCAD, AutoCAD.</li>
+        <li><strong>Laboratory Skills:</strong> Design of Experiments (DOE), Data Analysis, Data Visualization, Precision Measurement Techniques, Troubleshooting, Safety Compliance, Programming and Automation, Machine Shop Operations.</li>
+        <li><strong>Management &amp; Leadership Skills:</strong> Effective Communication, Decision-Making, Project Planning and Execution, Motivational Leadership, Adaptability, Team Coordination, Collaboration, Time Management, Initiative and Proactiveness, Problem Solving, Quality Control, Inspiring and Influencing.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Academic projects</h2>
+      <ul>
+        <li>A study on “Reflectance Spectroscopy of Metals as Photoactive Materials” using a home-built, cost-effective portable spectrometer. (Level 1 Project) (DOI: 10.13140/RG.2.2.19893.59363)</li>
+        <li>Investigating The Effect of Environmental &amp; Technical Factors on Solar Power Generation using an Arduino Development Board interfaced with relevant sensors. (Level 2 Project)</li>
+        <li>Design and Implementation of a Real-time 360-degree Ultrasonic Surveillance System using ATmega32A Microcontroller for Object Detection and Monitoring. (Level 3 Project)</li>
+        <li>Designing and precision-machining a metal prototype of an Oil Press Machine using the Machine Shop (Engineering Workshop) within the Department of Physics. (Level 3 Project)</li>
+        <li>Design and implementation of a prototype of a fully automated solar tracking and wireless power monitoring system for a solar-powered agricultural farm. (Level 4 Project)</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Leadership &amp; extracurricular activities</h2>
+      <ul>
+        <li><strong>President</strong> — Physics Society of the University of Colombo, Sri Lanka. <span class="when">2024 – Present</span></li>
+        <li><strong>Junior Treasurer</strong> — Physics Society of the University of Colombo, Sri Lanka. <span class="when">2023 – 2024</span></li>
+        <li><strong>Level 2 Coordinator</strong> — Chemical Society of the University of Colombo, Sri Lanka. <span class="when">2022 – 2023</span></li>
+        <li><strong>Level 1 Coordinator</strong> — Chemical Society of the University of Colombo, Sri Lanka. <span class="when">2021 – 2022</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="container page">
+    <section class="section">
+      <h2>Volunteering experience</h2>
+      <div class="item">
+        <div class="role">Project “Science Bus – Phase III” : Main Coordinator <span class="when">2023 – 2024</span></div>
+        <p>A community service project done by the Physics Society of the University of Colombo, funded by SPIE, the International Society for Optics and Photonics, to help science-enthusiastic students who are in rural and less-resourced areas in Sri Lanka.</p>
+      </div>
+
+      <div class="item">
+        <div class="role">Physics Journal Club by Physics Society, University of Colombo: Founding Coordinator <span class="when">2024</span></div>
+        <p>As a founding coordinator, I helped establish the Physics Journal Club under the guidance of the Physics Society's Academic Advisor to promote continuous learning and collaboration among physics students. The club hosts monthly discussions on scientific developments, enhancing learning, research skills, and collaboration. Both undergraduates and graduate students actively participate in these sessions by presenting their ongoing research projects.</p>
+      </div>
+
+      <div class="item">
+        <div class="role">Electronics Workshop for Advanced Level (Secondary Education) Physics Students. <span class="when">2024</span></div>
+        <p>I was one of the main coordinators from the Physics Society who actively contributed to the success of the Electronics Workshop conducted by the Physics Society for the students of a less-resourced school.</p>
+      </div>
+
+      <div class="item">
+        <div class="role">Organizing the Musical Event “Sathsara’ 23” <span class="when">2023</span></div>
+        <p>“Sathsara” is one of the signature projects of the Physics Society, where the academic staff, non-academic staff, and the students of the Department of Physics engage in hosting a musical concert open to everyone in the university. The Department personnel are involved in all the music activities, such as playing and singing. I have volunteered to coordinate the Level 3 Physics students for the concert, along with the organizing of the event.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Professional memberships</h2>
+      <ul>
+        <li>American Physical Society (APS).</li>
+        <li>Physics Society, University of Colombo.</li>
+        <li>Astronomical Society, University of Colombo.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>References</h2>
+      <div class="grid-2">
+        <div class="item">
+          <div class="role">Prof. Dilushan R Jayasundara (Senior Lecturer)</div>
+          <div>Department of Physics,<br>Faculty of Science, University of Colombo, Sri Lanka.</div>
+          <div>Phone: +94 (77) 089 5369</div>
+          <div>Email: <a href="mailto:dilushanj@phys.cmb.ac.lk">dilushanj@phys.cmb.ac.lk</a></div>
+        </div>
+        <div class="item">
+          <div class="role">Prof. Darshana L Weerawarne (Senior Lecturer)</div>
+          <div>Department of Physics,<br>Faculty of Science, University of Colombo, Sri Lanka.</div>
+          <div>Phone: +94 11 215 8384</div>
+          <div>Email: <a href="mailto:dweerawa@phys.cmb.ac.lk">dweerawa@phys.cmb.ac.lk</a></div>
+        </div>
+        <div class="item">
+          <div class="role">Dr. W A Monika Madhavi (Senior Lecturer)</div>
+          <div>Department of Physics,<br>Faculty of Science, University of Colombo, Sri Lanka.</div>
+          <div>Phone: +94 11-258 4777</div>
+          <div>Email: <a href="mailto:monika.madhavi@phys.cmb.ac.lk">monika.madhavi@phys.cmb.ac.lk</a></div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="container small">
+    <div>Helpful links:
+      <a href="https://www.res.cmb.ac.lk/physics/mrl/">MRL</a> ·
+      <a href="https://www.res.cmb.ac.lk/physics/dilushan-jayasundar/">PI — Dilushan Jayasundara</a> ·
+      <a href="https://science.cmb.ac.lk/cid/research/">CID Research</a> ·
+      <a href="https://www.res.cmb.ac.lk/physics/darshana-lakmal/">PI — Darshana Lakmal</a> ·
+      <a href="https://spie.org/">SPIE</a> ·
+      <a href="https://www.facebook.com/media/set/?set=a.879995293486374&type=3">Event Photos</a>
+    </div>
+  </footer>
 </body>
 </html>
