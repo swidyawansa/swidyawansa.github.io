@@ -40,6 +40,7 @@ margin: 0;
 font: var(--step-0)/1.65 "Georgia", "Times New Roman", serif;
 text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
+text-align: justify;
 }
 
 
@@ -48,19 +49,19 @@ text-rendering: optimizeLegibility;
 
 header{ border-bottom: 2px solid var(--line); padding-bottom: 14px; margin-bottom: 24px; }
 .mast{ display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
-.name{ font-size: var(--step-3); font-weight: 800; letter-spacing: .02em; line-height: 1.2; color: var(--accent); }
+.name{ font-size: var(--step-2); font-weight: 800; letter-spacing: .02em; line-height: 1.2; color: var(--accent); }
 .subtitle{ margin-top: 4px; color: var(--muted); font-style: italic; }
 .addr{ margin-top: 6px; color: var(--muted); }
-.avatar{ height: 140px; width: 140px; border-radius: 10px; object-fit: cover; box-shadow: 0 1px 8px rgba(0,0,0,.1); }
+.avatar{ height: 140px; width: 140px; border-radius: 40px; object-fit: cover; box-shadow: 0 1px 8px rgba(0,0,0,.1); }
 
 
-.contact{ display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 16px; color: var(--fg); font-size: var(--step--1); }
+.contact{ display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 16px; color: var(--fg); font-size: 1rem; }
 .contact div{ flex: 1 1 auto; min-width: 240px; }
 .contact a{ color: var(--link); text-decoration: none; font-weight: 500; }
 .contact a:hover{ text-decoration: underline; }
 
 
-h2{ margin: 28px 0 14px; font-size: var(--step-2); letter-spacing: .05em; text-transform: uppercase; font-weight: 700; border-bottom: 2px solid var(--line); padding-bottom: 4px; color: var(--accent); }
+h2{ margin: 28px 0 14px; font-size: 1.15rem; letter-spacing: .04em; text-transform: uppercase; font-weight: 700; border-bottom: 2px solid var(--line); padding-bottom: 4px; color: var(--accent); }
 .section{ margin-top: 22px; }
 .item{ margin-bottom: 16px; }
 .role{ font-weight: 700; }
@@ -111,15 +112,18 @@ section p, section li{ max-width: 75ch; }
         <div>
           <div class="name">Sathira Promodya Widyawansa (Widyawansa S P)</div>
           <div class="subtitle">Curriculum Vitae</div>
-          <div class="addr" style="color: #fff;">Work Address: Department of Physics, University of Colombo, Sri Lanka.</div>
-          <div class="addr" style="color: #fff;">Personal Address: No 75/4, Ellawala Lane, Batugedara, Ratnapura, Sri Lanka.</div>
+          <div style="margin: 10px 0 0 0;">
+            <a href="assets/Sathira%20Widyawansa%20CV.pdf" download style="font-weight:bold;color:var(--link);text-decoration:none;">Download CV in PDF</a>
+          </div>
+          <div class="addr" style="color: #fff; font-size:1rem;">Work Address: Department of Physics, University of Colombo, Sri Lanka.</div>
+          <div class="addr" style="color: #fff; font-size:1rem;">Personal Address: No 75/4, Ellawala Lane, Batugedara, Ratnapura, Sri Lanka.</div>
         </div>
         <img class="avatar" src="assets/swidyawansa_pic.jpg" alt="Portrait of Sathira Promodya Widyawansa" />
       </div>
       <div class="contact">
         <div>Personal Email: <a href="mailto:swidyawansa@gmail.com">swidyawansa@gmail.com</a></div>
         <div>Academic Email: <a href="mailto:2020s18255@stu.cmb.ac.lk">2020s18255@stu.cmb.ac.lk</a></div>
-        <div>Telephone: (+94) 71 6593416</div>
+        <div>Telephone (WhatsApp): (+94) 71 6593416</div>
         <div style="display: flex; gap: 100px; align-items: center;">
           <a href="https://www.linkedin.com/in/sathira-widyawansa-629290194/">LinkedIn</a>
           <a href="https://www.researchgate.net/profile/Sathira-Widyawansa">ResearchGate</a>
@@ -129,8 +133,11 @@ section p, section li{ max-width: 75ch; }
     </header>
 
     <section class="section">
-      <h2>Personal statement</h2>
-      <p>I'm a committed, self-motivated, knowledgeable, and innovative engineering physics undergraduate who wishes to contribute to the field of science for the betterment of humanity by applying the knowledge, expertise, and experience I gained during my studies.</p>
+  <div class="role" style="color:var(--accent); font-size:1rem; font-weight:600; margin-bottom:1px;">
+    Current Affiliation: <span style="font-weight:600; color:white;">Graduate Research Assistant</span> <span style="font-weight:500; color:white;">(Department of Physics, University of Colombo.)</span>
+  </div>
+  <h2>Personal statement</h2>
+      <p>I'm a committed, self-motivated, knowledgeable, and innovative applied physics researcher who wishes to contribute to the field of science for the betterment of humanity by applying the knowledge, expertise, and experience I gained during my studies.</p>
     </section>
 
     <section class="section">
@@ -171,12 +178,11 @@ section p, section li{ max-width: 75ch; }
     </section>
 
     <section class="section">
-      <h2>Undergraduate research project</h2>
+      <h2>Undergraduate research project <span class="when">2024 – 2025</span></h2>
       <div class="item">
-        <div class="role">Grade A+ <span class="when">2024 – 2025</span></div>
-        <ul>
-          <li><strong>Dissertation Title</strong> – Graphene-Based Flexible LP Gas Sensor.</li>
-        </ul>
+        <strong>Dissertation Title</strong> – Graphene-Based Flexible LP Gas Sensor.<br>
+        <div class="role">Grade A+</div>
+        <strong>Awards</strong> – Professor Osmund Jayaratne Memorial Gold Medal for the Best Research Project in Engineering Physics, University of Colombo, 2025.
         <p>The research involved developing a chemiresistive nanomaterial which is sensitive to LPG and printing it on a flexible substrate with a circuit. This included the nanomaterial’s synthesis, characterization, optimization, and application, providing hands-on experience in its fabrication and analysis along with the full sensor fabrication.</p>
         <ul>
           <li>Supervisor: Prof. Dilushan R. Jayasundara</li>
@@ -324,12 +330,13 @@ section p, section li{ max-width: 75ch; }
 
   <footer class="container small">
     <div>Helpful links:
-      <a href="https://www.res.cmb.ac.lk/physics/mrl/">MRL</a> ·
-      <a href="https://www.res.cmb.ac.lk/physics/dilushan-jayasundar/">PI — Dilushan Jayasundara</a> ·
-      <a href="https://science.cmb.ac.lk/cid/research/">CID Research</a> ·
-      <a href="https://www.res.cmb.ac.lk/physics/darshana-lakmal/">PI — Darshana Lakmal</a> ·
-      <a href="https://spie.org/">SPIE</a> ·
-      <a href="https://www.facebook.com/media/set/?set=a.879995293486374&type=3">Event Photos</a>
+  <a href="assets/Sathira%20Widyawansa%20CV.pdf" download>Download PDF CV</a> ·
+  <a href="https://www.res.cmb.ac.lk/physics/mrl/">MRL</a> ·
+  <a href="https://www.res.cmb.ac.lk/physics/dilushan-jayasundar/">PI — Dilushan Jayasundara</a> ·
+  <a href="https://science.cmb.ac.lk/cid/research/">CID Research</a> ·
+  <a href="https://www.res.cmb.ac.lk/physics/darshana-lakmal/">PI — Darshana Lakmal</a> ·
+  <a href="https://spie.org/">SPIE</a> ·
+  <a href="https://www.facebook.com/media/set/?set=a.879995293486374&type=3">Event Photos</a>
     </div>
   </footer>
 </body>
